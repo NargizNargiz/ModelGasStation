@@ -5,6 +5,10 @@ enum class MarkPetrol(val mark: Int) {
 
     fun getRandom(): MarkPetrol {
         val random: Random = Random
-        return values()[random.nextInt(values().size)]
-    }
+        val res = values()[random.nextInt(values().size)]
+        if (res == UNDEFINED){
+            return  values()[random.nextInt(values().size)]
+        }else
+            return res
+        }
 }
