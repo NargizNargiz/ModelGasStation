@@ -1,0 +1,10 @@
+package pack
+
+import java.util.*
+
+interface StatePetrolStation{
+
+}
+class ArrayPetrolStations(_arrPetrolStations : Queue<PetrolStation>): StatePetrolStation {
+
+}
