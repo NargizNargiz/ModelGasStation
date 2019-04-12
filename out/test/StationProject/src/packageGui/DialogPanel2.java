@@ -2,7 +2,6 @@ package packageGui;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.HashMap;
@@ -188,7 +187,7 @@ public class DialogPanel2 extends JFrame {
         mBox.add(Box.createVerticalStrut(47));
         mBox.add(box28);
 
-        JDialogTest.TestKeyListener keyL = new JDialogTest.TestKeyListener();
+        JDialogStation.TestKeyListener keyL = new JDialogStation.TestKeyListener();
         stationField1.addKeyListener(keyL);
         stationField2.addKeyListener(keyL);
         stationField3.addKeyListener(keyL);

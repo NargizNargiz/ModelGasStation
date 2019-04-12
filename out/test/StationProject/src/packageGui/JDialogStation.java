@@ -1,14 +1,11 @@
 package packageGui;
-import jdk.nashorn.internal.codegen.MapCreator;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
-import java.awt.*;
 import java.awt.event.*;
 import java.util.HashMap;
-import java.util.Map;
 
-public class JDialogTest extends JFrame
+public class JDialogStation extends JFrame
 {
     private JTextField nameStationField;
     private JTextField markUpField;
@@ -17,8 +14,8 @@ public class JDialogTest extends JFrame
     HashMap<String, String> mapDataFromFields;
     private static final long serialVersionUID = 1L;
 
-    public JDialogTest() {
-        super("DialogWindows");
+    public JDialogStation() {
+        super("Модель: бензозаправочная станция");
         // Выход из программы при закрытии
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         // Кнопки для создания диалоговых окон
@@ -136,6 +133,6 @@ public class JDialogTest extends JFrame
 
     public static void main(String[] args)
     {
-        new JDialogTest();
+        new JDialogStation();
     }
 }

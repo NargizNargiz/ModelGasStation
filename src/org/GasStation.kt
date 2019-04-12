@@ -77,15 +77,8 @@ data class GasStation(private var name: String,
             println("Ошибка, такого типа бензина нет : ${req.mark}")
         }
     }
-    fun updatePetrolStationsQueues(time:Int){
-        for (station in arrayPetrolStation){
-            if (station.processRequest(time)){
-                incCountServed(1)
-            }
-        }
-    }
-    fun newUpd(time:Int){
-        println("newUpd")
+    fun updatePetrolStations(time:Int){
+        println("updatePetrolStations")
         for (station in arrayPetrolStation){
             incCountServed(station.processReqs(time))
         }

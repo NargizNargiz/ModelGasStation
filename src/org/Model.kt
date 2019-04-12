@@ -1,6 +1,7 @@
 package org
 
 import java.util.*
+import kotlin.math.abs
 import kotlin.math.round
 import kotlin.math.sqrt
 import kotlin.random.Random
@@ -54,15 +55,19 @@ data class Model(private var nameStation: String = "petrol",  private var markUp
         gasStation =  myGasStation
     }
 //    возрващает массив отрезков времени, через которые поступают заявки. Это случайные величины
-    fun getRandomSegment(stadanrtDeviation: Int):Deque<Int>{
-        var value = 0.0
-        val n = 12
+    fun getRandomSegment(a: Int, b:Int):Deque<Int>{
+        val n = 15
         val res  = ArrayDeque<Int>()
-        val randomValues = List(12){ Random.nextDouble(0.0, 10.0)}
-            .map { round(it*1000) /1000 }
+        var valS = 0.0
+        var value = 0.0
         for (i in 0 until n){
-            value = (randomValues[i] - 1)*stadanrtDeviation*sqrt(1.0) + 5
-            res.add(value.toInt())
+            val randomValues = List(12){ Random.nextDouble(0.0, 1.0)}
+                    .map { round(it*1000) /1000 }
+            valS = randomValues.sum()
+            value = a + (b-a)*(valS-6)
+            if (value.toInt() > 0 && value >a && value <=b) {
+                res.add(value.toInt())
+            }
         }
         return res
     }

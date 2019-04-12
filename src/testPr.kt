@@ -2,12 +2,9 @@ import org.*
 import java.io.File
 import java.util.*
 
-// 0.28 л/c
 fun createSt(name:String, markUp: Int, maxLenQue:Int, sizeGeneralQueue: Int): Model {
     val firstTestModel = Model(name, markUp)
     val generalQueue: Deque<Request>
-//  создаем станцию
-//    firstTestModel.maxLengthQueue = 3
     firstTestModel.setMaxLen(maxLenQue)
     firstTestModel.createGasStation()
     firstTestModel.queueRequests(sizeGeneralQueue, firstTestModel.getGasStation())
@@ -19,10 +16,12 @@ fun createSt(name:String, markUp: Int, maxLenQue:Int, sizeGeneralQueue: Int): Mo
 fun programRun1(s:String) {
     val sizeGeneralQueue = 14
     var countInputRequests: Int = 0
+    val beginInterval = 3
+    val endInterval = 15
 //  инициализация модели: создали модель с наценкой и названием
-    val firstTestModel = createSt(s,5,1,sizeGeneralQueue)
+   val firstTestModel = createSt(s,5,1,sizeGeneralQueue)
     countInputRequests += sizeGeneralQueue
-    var segment = firstTestModel.getRandomSegment(3)
+    var segment = firstTestModel.getRandomSegment(beginInterval,endInterval)
     println(segment)
 //    var generalQueue = firstTestModel.getGasStation().getNewRequests()
 //    var generalQueue = initArrReqs()
@@ -50,12 +49,12 @@ fun programRun1(s:String) {
                     generalQueue.removeFirst()
                     segment.removeFirst()
                 }else{
-                    firstTestModel.getGasStation().newUpd(step)
+                    firstTestModel.getGasStation().updatePetrolStations(step)
                     timeGlob+=step
                 }
                 myWriter(writer,firstTestModel.getGasStation())
             }else{
-                segment = firstTestModel.getRandomSegment(1)
+                segment = firstTestModel.getRandomSegment(beginInterval,endInterval)
                 println(segment)
             }
         }else{
@@ -66,7 +65,7 @@ fun programRun1(s:String) {
             countInputRequests +=sizeGeneralQueue
         }
     }
-    firstTestModel.getGasStation().newUpd(step)
+    firstTestModel.getGasStation().updatePetrolStations(step)
     myWriter(writer,firstTestModel.getGasStation())
     firstTestModel.getGasStation().setSumAllProfits()
     firstTestModel.getGasStation().setNotServe(countInputRequests)
@@ -77,3 +76,4 @@ fun programRun1(s:String) {
 fun main(){
     programRun1("test")
 }
+// 0.28 л/c
