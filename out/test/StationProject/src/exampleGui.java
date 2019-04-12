@@ -6,7 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-import pack.*;
+
 public class exampleGui extends JFrame
 {
     private static final long serialVersionUID = 1L;
@@ -26,7 +26,7 @@ public class exampleGui extends JFrame
     String name;
 
     public exampleGui() {
-        super("Test frame");
+        super("ResultPanel frame");
         createGUI();
     }
     public String getName(){
@@ -61,7 +61,7 @@ public class exampleGui extends JFrame
 
         Box box4 = Box.createHorizontalBox();
         JLabel countPetrolLabel = new JLabel("Количество автоматов на станции:");
-        countPetrolStField = new JTextField(15);
+        countPetrolStField = new JTextField(17);
         box4.add(countPetrolLabel);
         box4.add(Box.createHorizontalStrut(6));
         box4.add(countPetrolStField);
@@ -97,21 +97,28 @@ public class exampleGui extends JFrame
         box8.add(cancel);
 
         Box mainBox = Box.createVerticalBox();
-        mainBox.setBorder(new EmptyBorder(20,20,20,20));
+
+        mainBox.setBorder(new EmptyBorder(40,40,60,60));
         mainBox.add(box1);
 
         mainBox.add(Box.createVerticalStrut(12));
         mainBox.add(box2);
+
         mainBox.add(Box.createVerticalStrut(17));
         mainBox.add(box3);
+
         mainBox.add(Box.createVerticalStrut(22));
         mainBox.add(box4);
+
         mainBox.add(Box.createVerticalStrut(27));
         mainBox.add(box5);
+
         mainBox.add(Box.createVerticalStrut(32));
         mainBox.add(box6);
+
         mainBox.add(Box.createVerticalStrut(37));
         mainBox.add(box7);
+
         mainBox.add(Box.createVerticalStrut(42));
         mainBox.add(box8);
 
@@ -165,7 +172,7 @@ public class exampleGui extends JFrame
     public class TestActionListener implements ActionListener {
         public void actionPerformed(ActionEvent e) {
             name = e.getActionCommand();
-          pack.ProgramMainKt.programRun(name);
+//          org.ProgramMainKt.programRun(name);
 //          System.out.println(name);
             textField.setText(e.getActionCommand());
 

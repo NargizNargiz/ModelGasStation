@@ -1,0 +1,366 @@
+AllRequets: 
+Request(volume=36, money=0, mark=A101, timeLeft=129.636)
+Request(volume=18, money=0, mark=A92, timeLeft=64.818)
+Request(volume=36, money=0, mark=A98, timeLeft=129.636)
+Request(volume=27, money=0, mark=A101, timeLeft=97.227)
+Request(volume=35, money=0, mark=A101, timeLeft=126.035)
+Request(volume=27, money=0, mark=A95, timeLeft=97.227)
+Request(volume=44, money=0, mark=A80, timeLeft=158.444)
+Request(volume=36, money=0, mark=A80, timeLeft=129.636)
+Request(volume=35, money=0, mark=A92, timeLeft=126.035)
+Request(volume=34, money=0, mark=A102, timeLeft=122.434)
+Request(volume=29, money=0, mark=A80, timeLeft=104.429)
+Request(volume=35, money=0, mark=A101, timeLeft=126.035)
+Request(volume=47, money=0, mark=A100, timeLeft=169.247)
+Request(volume=46, money=0, mark=A80, timeLeft=165.646)
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 0
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: [Request(volume=36, money=648, mark=A101, timeLeft=129.636)]
+A102: []
+served: 0
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 1
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 1
+
+Requets: 
+A80: []
+A92: [Request(volume=18, money=108, mark=A92, timeLeft=64.818)]
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 1
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 2
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 2
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 2
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: [Request(volume=36, money=432, mark=A98, timeLeft=129.636)]
+A100: []
+A101: []
+A102: []
+served: 2
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 3
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 3
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: [Request(volume=27, money=486, mark=A101, timeLeft=97.227)]
+A102: []
+served: 3
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 4
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 4
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: [Request(volume=35, money=630, mark=A101, timeLeft=126.035)]
+A102: []
+served: 4
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 5
+
+Requets: 
+A80: []
+A92: []
+A95: [Request(volume=27, money=243, mark=A95, timeLeft=97.227)]
+A98: []
+A100: []
+A101: []
+A102: []
+served: 5
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 6
+
+Requets: 
+A80: [Request(volume=44, money=132, mark=A80, timeLeft=158.444)]
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 6
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 7
+
+Requets: 
+A80: [Request(volume=36, money=108, mark=A80, timeLeft=129.636)]
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 7
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 8
+
+Requets: 
+A80: []
+A92: [Request(volume=35, money=210, mark=A92, timeLeft=126.035)]
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 8
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 9
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 9
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: [Request(volume=34, money=714, mark=A102, timeLeft=122.434)]
+served: 9
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 10
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 10
+
+Requets: 
+A80: [Request(volume=29, money=87, mark=A80, timeLeft=104.429)]
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 10
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 11
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: [Request(volume=35, money=630, mark=A101, timeLeft=126.035)]
+A102: []
+served: 11
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: [Request(volume=47, money=705, mark=A100, timeLeft=169.247)]
+A101: [Request(volume=35, money=630, mark=A101, timeLeft=126.035)]
+A102: []
+served: 11
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 13
+
+Requets: 
+A80: [Request(volume=46, money=138, mark=A80, timeLeft=165.646)]
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 13
+
+Requets: 
+A80: []
+A92: []
+A95: []
+A98: []
+A100: []
+A101: []
+A102: []
+served: 14
+GasStation(name=test, newRequests=[], arrayPetrolStation=[PetrolStation(mark=A80, price=3, countSameMarkPetrol=1), PetrolStation(mark=A92, price=6, countSameMarkPetrol=1), PetrolStation(mark=A95, price=9, countSameMarkPetrol=1), PetrolStation(mark=A98, price=12, countSameMarkPetrol=1), PetrolStation(mark=A100, price=15, countSameMarkPetrol=1), PetrolStation(mark=A101, price=18, countSameMarkPetrol=1), PetrolStation(mark=A102, price=21, countSameMarkPetrol=1)], countServed=14, countNotServe=0, profit=5271.0, maxLengthQueue=1)

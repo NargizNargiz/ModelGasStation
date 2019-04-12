@@ -1,13 +1,12 @@
+import packageGui.gui
 import java.awt.Color
-import java.awt.Panel
 import javax.swing.JButton
 import javax.swing.JFrame
-import javax.swing.JPanel
 
-//class gui {
+//class packageGui.gui {
 //    var pan: JPanel = JPanel()
 //
-//    fun gui(){
+//    fun packageGui.gui(){
 //        pan.background = Color.darkGray
 //    }
 //}

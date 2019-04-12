@@ -5,12 +5,11 @@ public class petrolStationCountPanel extends JFrame {
     private JButton    button1;
     private JButton    button2;
     public petrolStationCountPanel() {
-        super("Test frame");
+        super("ResultPanel frame");
         createPetrolStGUI();
     }
     public void createPetrolStGUI() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
         button1 = new JButton("Настроить количество автоматов");
@@ -22,6 +21,5 @@ public class petrolStationCountPanel extends JFrame {
         setContentPane(panel);
         setPreferredSize(new Dimension(320, 100));
         setVisible(true);
-
     }
 }

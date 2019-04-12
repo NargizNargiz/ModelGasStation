@@ -1,101 +1,194 @@
 AllRequets: 
-Request(volume=41, money=0, mark=A92, timeLeft=147.641, fullTank=false)
-Request(volume=44, money=0, mark=A92, timeLeft=158.444, fullTank=false)
-Request(volume=15, money=0, mark=A101, timeLeft=54.015, fullTank=false)
-Request(volume=44, money=0, mark=A92, timeLeft=158.444, fullTank=false)
-Request(volume=27, money=0, mark=A98, timeLeft=97.227, fullTank=false)
-Request(volume=14, money=0, mark=A102, timeLeft=50.414, fullTank=false)
-Request(volume=49, money=0, mark=A80, timeLeft=176.449, fullTank=false)
-Request(volume=46, money=0, mark=A95, timeLeft=165.646, fullTank=false)
-Request(volume=19, money=0, mark=A101, timeLeft=68.419, fullTank=false)
-Request(volume=20, money=0, mark=A100, timeLeft=72.02, fullTank=false)
+Request(volume=33, money=0, mark=A102, timeLeft=118.833, fullTank=false)
+Request(volume=48, money=0, mark=A80, timeLeft=172.848, fullTank=false)
+Request(volume=36, money=0, mark=A92, timeLeft=129.636, fullTank=false)
+Request(volume=10, money=0, mark=A102, timeLeft=36.01, fullTank=false)
+Request(volume=32, money=0, mark=A101, timeLeft=115.232, fullTank=false)
+Request(volume=11, money=0, mark=A100, timeLeft=39.611, fullTank=false)
+Request(volume=21, money=0, mark=A100, timeLeft=75.621, fullTank=false)
+Request(volume=16, money=0, mark=A98, timeLeft=57.616, fullTank=false)
+Request(volume=34, money=0, mark=A101, timeLeft=122.434, fullTank=false)
+Request(volume=39, money=0, mark=A95, timeLeft=140.439, fullTank=false)
+Request(volume=49, money=0, mark=A102, timeLeft=176.449, fullTank=false)
+Request(volume=10, money=0, mark=A80, timeLeft=36.01, fullTank=false)
+Request(volume=15, money=0, mark=A100, timeLeft=54.015, fullTank=false)
+Request(volume=11, money=0, mark=A98, timeLeft=39.611, fullTank=false)
+Request(volume=21, money=0, mark=A102, timeLeft=75.621, fullTank=false)
 Requets: 
 A80: []
-A92: [Request(volume=41, money=246, mark=A92, timeLeft=147.641, fullTank=false)]
+A92: []
+A95: []
 A95: []
 A98: []
+A100: []
+A100: []
+A101: []
+A102: [Request(volume=33, money=693, mark=A102, timeLeft=118.833, fullTank=false)]
+A102: []
+Requets: 
+A80: [Request(volume=48, money=144, mark=A80, timeLeft=172.848, fullTank=false)]
+A92: []
+A95: []
+A95: []
+A98: []
+A100: []
 A100: []
 A101: []
 A102: []
+A102: []
 Requets: 
 A80: []
-A92: [Request(volume=44, money=264, mark=A92, timeLeft=158.444, fullTank=false)]
+A92: [Request(volume=36, money=216, mark=A92, timeLeft=129.636, fullTank=false)]
+A95: []
 A95: []
 A98: []
 A100: []
+A100: []
 A101: []
+A102: []
 A102: []
 Requets: 
 A80: []
 A92: []
 A95: []
+A95: []
 A98: []
 A100: []
-A101: [Request(volume=15, money=270, mark=A101, timeLeft=54.015, fullTank=false)]
+A100: []
+A101: []
+A102: [Request(volume=10, money=210, mark=A102, timeLeft=36.01, fullTank=false)]
 A102: []
 Requets: 
 A80: []
 A92: []
 A95: []
+A95: []
 A98: []
 A100: []
-A101: []
+A100: []
+A101: [Request(volume=32, money=576, mark=A101, timeLeft=115.232, fullTank=false)]
+A102: []
 A102: []
 Requets: 
 A80: []
 A92: []
 A95: []
-A98: [Request(volume=27, money=324, mark=A98, timeLeft=97.227, fullTank=false)]
+A95: []
+A98: []
+A100: [Request(volume=11, money=165, mark=A100, timeLeft=39.611, fullTank=false)]
 A100: []
 A101: []
+A102: []
 A102: []
 Requets: 
 A80: []
 A92: []
 A95: []
-A98: []
-A100: []
-A101: []
-A102: [Request(volume=14, money=294, mark=A102, timeLeft=50.414, fullTank=false)]
-Requets: 
-A80: [Request(volume=49, money=147, mark=A80, timeLeft=176.449, fullTank=false)]
-A92: []
 A95: []
 A98: []
+A100: [Request(volume=21, money=315, mark=A100, timeLeft=75.621, fullTank=false)]
 A100: []
 A101: []
 A102: []
-Requets: 
-A80: []
-A92: []
-A95: [Request(volume=46, money=414, mark=A95, timeLeft=165.646, fullTank=false)]
-A98: []
-A100: []
-A101: []
 A102: []
 Requets: 
 A80: []
 A92: []
 A95: []
-A98: []
+A95: []
+A98: [Request(volume=16, money=192, mark=A98, timeLeft=57.616, fullTank=false)]
 A100: []
-A101: [Request(volume=19, money=342, mark=A101, timeLeft=68.419, fullTank=false)]
+A100: []
+A101: []
+A102: []
 A102: []
 Requets: 
 A80: []
 A92: []
 A95: []
+A95: []
 A98: []
-A100: [Request(volume=20, money=300, mark=A100, timeLeft=72.02, fullTank=false)]
+A100: []
+A100: []
+A101: [Request(volume=34, money=612, mark=A101, timeLeft=122.434, fullTank=false)]
+A102: []
+A102: []
+Requets: 
+A80: []
+A92: []
+A95: [Request(volume=39, money=351, mark=A95, timeLeft=140.439, fullTank=false)]
+A95: []
+A98: []
+A100: []
+A100: []
 A101: []
 A102: []
+A102: []
+Requets: 
+A80: []
+A92: []
+A95: []
+A95: []
+A98: []
+A100: []
+A100: []
+A101: []
+A102: [Request(volume=49, money=1029, mark=A102, timeLeft=176.449, fullTank=false)]
+A102: []
+Requets: 
+A80: [Request(volume=10, money=30, mark=A80, timeLeft=36.01, fullTank=false)]
+A92: []
+A95: []
+A95: []
+A98: []
+A100: []
+A100: []
+A101: []
+A102: []
+A102: []
+Requets: 
+A80: []
+A92: []
+A95: []
+A95: []
+A98: []
+A100: [Request(volume=15, money=225, mark=A100, timeLeft=54.015, fullTank=false)]
+A100: []
+A101: []
+A102: []
+A102: []
+Requets: 
+A80: []
+A92: []
+A95: []
+A95: []
+A98: [Request(volume=11, money=132, mark=A98, timeLeft=39.611, fullTank=false)]
+A100: []
+A100: []
+A101: []
+A102: []
+A102: []
+Requets: 
+A80: []
+A92: []
+A95: []
+A95: []
+A98: []
+A100: []
+A100: []
+A101: []
+A102: []
+A102: [Request(volume=21, money=0, mark=A102, timeLeft=75.621, fullTank=false)]
 result: 
 A80: []
 A92: []
 A95: []
+A95: []
 A98: []
+A100: []
 A100: []
 A101: []
 A102: []
+A102: []
 
-2601.0
+4890.0

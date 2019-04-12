@@ -1,19 +1,18 @@
-import pack.Request
-import pack.createSt
+import org.Request
 import java.io.File
 import java.util.*
 
 fun programRun(s:String) {
     val steps = 144
 //  инициализация модели: создали модель с наценкой и названием
-    val firstTestModel = createSt(s)
+    val firstTestModel = createSt(s,5,3,14)
     var generalQueue: Deque<Request> = ArrayDeque<Request>()
     val writer = File("somefile2.txt").bufferedWriter()
     var req: Request
     val segment = firstTestModel.getRandomSegment(1)
     println(segment)
-    firstTestModel.queueRequest(10, firstTestModel.getGasStation())
-    generalQueue = firstTestModel.getGasStation().getNewRequest()
+    firstTestModel.queueRequests(10, firstTestModel.getGasStation())
+    generalQueue = firstTestModel.getGasStation().getNewRequests()
     generalQueue.forEach{ it.setfillTime(0.2777)}
     writer.write("AllRequets: \n")
     var globalTimer = 0
