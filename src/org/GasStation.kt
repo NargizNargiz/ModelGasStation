@@ -78,7 +78,7 @@ data class GasStation(private var name: String,
         }
     }
     fun updatePetrolStations(time:Int){
-        println("updatePetrolStations")
+//        println("updatePetrolStations")
         for (station in arrayPetrolStation){
             incCountServed(station.processReqs(time))
         }

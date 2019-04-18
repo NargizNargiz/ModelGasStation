@@ -2,31 +2,36 @@ import org.*
 import java.io.File
 import java.util.*
 
-fun createSt(name:String, markUp: Int, maxLenQue:Int, sizeGeneralQueue: Int): Model {
-    val firstTestModel = Model(name, markUp)
+fun createSt(name:String, markUp: Int, maxLenQue:Int,
+             sizeGeneralQueue: Int, countPumps:Int,
+             counts: Map<String,String>, prices :Map<String,String>): Model {
+
+    val firstTestModel = Model(name, markUp,countPumps)
     val generalQueue: Deque<Request>
+
     firstTestModel.setMaxLen(maxLenQue)
-    firstTestModel.createGasStation()
+    firstTestModel.createGasStation(counts, prices)
     firstTestModel.queueRequests(sizeGeneralQueue, firstTestModel.getGasStation())
     generalQueue = firstTestModel.getGasStation().getNewRequests()
     generalQueue.forEach{ it.setfillTime(0.2777)}
     return firstTestModel
 }
 
-fun programRun1(s:String) {
+fun programRun1(model:Model) {
     val sizeGeneralQueue = 14
     var countInputRequests: Int = 0
     val beginInterval = 3
     val endInterval = 15
 //  инициализация модели: создали модель с наценкой и названием
-   val firstTestModel = createSt(s,5,1,sizeGeneralQueue)
+//   val firstTestModel = createSt(s,5,1,sizeGeneralQueue,6, mapOf(), mapOf())
+   val firstTestModel = model
     countInputRequests += sizeGeneralQueue
     var segment = firstTestModel.getRandomSegment(beginInterval,endInterval)
     println(segment)
 //    var generalQueue = firstTestModel.getGasStation().getNewRequests()
 //    var generalQueue = initArrReqs()
     var generalQueue = firstTestModel.getGasStation().getNewRequests()
-    val writer = File("somefile4.txt").bufferedWriter()
+    val writer = File("somefile5.txt").bufferedWriter()
     writer.write("AllRequets: \n")
     generalQueue.forEach{writer.write("${it}\n")}
 //    firstTestModel.getGasStation().getNewRequests().forEach{writer.write("${it}\n") }
@@ -36,11 +41,11 @@ fun programRun1(s:String) {
     val wholeTime = 10080
     var req :Request
     while(timeGlob <= wholeTime ){
-        println("tg = $timeGlob, tr =  $timeEvent")
+//        println("tg = $timeGlob, tr =  $timeEvent")
         if(!generalQueue.isEmpty()){
             if(!segment.isEmpty()){
                 if (timeEvent+segment.first() <= timeGlob+step){
-                    println ("Я взял из очереди запрос c временем ${timeEvent+segment.first()}. Это между $timeGlob и ${timeGlob+step}")
+//                    println ("Я взял из очереди запрос c временем ${timeEvent+segment.first()}. Это между $timeGlob и ${timeGlob+step}")
                     timeEvent+= segment.first()
                     req = generalQueue.first()
                     // взяли первы запрос из очереди теперь поставить в нужную очередь
@@ -55,10 +60,10 @@ fun programRun1(s:String) {
                 myWriter(writer,firstTestModel.getGasStation())
             }else{
                 segment = firstTestModel.getRandomSegment(beginInterval,endInterval)
-                println(segment)
+//                println(segment)
             }
         }else{
-            println("Главная очередь пуста")
+//            println("Главная очередь пуста")
 //            break
             firstTestModel.queueRequests(sizeGeneralQueue, firstTestModel.getGasStation())
             generalQueue = firstTestModel.getGasStation().getNewRequests()
@@ -74,6 +79,6 @@ fun programRun1(s:String) {
 }
 
 fun main(){
-    programRun1("test")
+//    programRun1("test")
 }
 // 0.28 л/c

@@ -66,10 +66,10 @@ data class PetrolStation(var mark: MarkPetrol = MarkPetrol.UNDEFINED, var price:
         while (timer > 0){
                 if (!requests.isEmpty()){
                     currentReq = requests.first()
-                    println("timer = $timer")
+//                    println("timer = $timer")
 //                  если время обслуживания данной заявки меньше шага, то обслуживание происходит
                     if (timer  > currentReq.getTimeLeft()){
-                        println("timer = $timer")
+//                        println("timer = $timer")
                         profitStation += currentReq.priceWithMarkUp
                         timer -=  currentReq.getTimeLeft().toInt()
                         ++countServed

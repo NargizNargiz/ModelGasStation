@@ -3,8 +3,11 @@ package packageGui;
 import javax.swing.*;
 import java.awt.*;
 
-public class ResultPanel extends JFrame {
-    public void paint(Graphics g)
+public class MyGraphics extends JFrame {
+    MyGraphics() {
+        setPreferredSize(new Dimension(500, 100));
+    }
+    public void paint(java.awt.Graphics g)
     {
         super.paint(g);
         Font font = new Font("URW Chancery L", Font.BOLD, 14);
@@ -41,17 +44,33 @@ public class ResultPanel extends JFrame {
         g.drawString("A101", 80, 220);
     }
 
-    public ResultPanel()
+    public void createGui()
     {
-        super("ResultPanel");
-        JFrame.setDefaultLookAndFeelDecorated(true);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        pack();
-        setSize(800, 600);
-        setVisible(true);
+        final JFrame frame = new JFrame();
+        JPanel panel = new JPanel();
+        MyGraphics g = new MyGraphics();
+        panel.add(g);
+        frame.add(panel);
+        frame.pack();
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+//        super("ResultPanel");
+//        setDefaultLookAndFeelDecorated(true);
+//        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        JPanel pan = new JPanel();
+//        pan.add();
+//        setSize(800, 600);
+//        setVisible(true);
     }
     public static void main(String[] args) {
-        new ResultPanel();
+        EventQueue.invokeLater(new Runnable() {
+
+            @Override
+            public void run() {
+                MyGraphics GUI = new MyGraphics();
+                GUI.createGui();
+            }
+        });
     }
 
 }

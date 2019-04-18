@@ -3,7 +3,10 @@ package packageGui;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.*;
+import java.util.ArrayList;
 import java.util.HashMap;
+import static packageGui.TestGuiWithKotlinKt.*;
+
 
 public class JDialogStation extends JFrame
 {
@@ -13,6 +16,7 @@ public class JDialogStation extends JFrame
     private JTextField countPetrolStField;
     HashMap<String, String> mapDataFromFields;
     private static final long serialVersionUID = 1L;
+    private MyGui panelModeling;
 
     public JDialogStation() {
         super("Модель: бензозаправочная станция");
@@ -25,7 +29,6 @@ public class JDialogStation extends JFrame
         box1.add(nameStLabel);
         box1.add(Box.createHorizontalStrut(6));
         box1.add(nameStationField);
-
 
         Box box2 = Box.createHorizontalBox();
         JLabel markUpFieldLabel = new JLabel("Наценка:");
@@ -49,14 +52,17 @@ public class JDialogStation extends JFrame
         box4.add(Box.createHorizontalStrut(6));
         box4.add(countPetrolStField);
 
-        JButton ok = new JButton("OK");
+        JButton ok = new JButton("Начать моделирование");
         ok.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 setValuesMap();
+                printData();
+                panelModeling = new MyGui();
+                myRun(panelModeling);
+
             }
         });
-
         Box mainBox = Box.createVerticalBox();
         mainBox.setBorder(new EmptyBorder(20,20,20,20));
         mainBox.add(box1);
@@ -66,7 +72,6 @@ public class JDialogStation extends JFrame
         mainBox.add(box3);
         mainBox.add(Box.createVerticalStrut(22));
         mainBox.add(box4);
-
         TestKeyListener testKeyL = new TestKeyListener();
         nameStationField.addKeyListener(testKeyL);
         markUpField.addKeyListener(testKeyL);
@@ -79,6 +84,7 @@ public class JDialogStation extends JFrame
                 DialogPanel2 dialog2 = new DialogPanel2();
 //                DialogPanel(dialog1);
                 dialog2.DialogPanel();
+
             }
         });
 
@@ -115,7 +121,7 @@ public class JDialogStation extends JFrame
         mapDataFromFields.put("MarkUp",markUpField.getText());
         mapDataFromFields.put("MaxLenQueue",maxLenQueueField.getText());
         mapDataFromFields.put("CountAutomate",countPetrolStField.getText());
-        System.out.println(mapDataFromFields);
+        saveData("data",mapDataFromFields);
     }
 
 
@@ -123,6 +129,8 @@ public class JDialogStation extends JFrame
      * @param title - заголовок окна
      * @param modal - флаг модальности
      */
+
+
     public JDialog createDialog(String title, boolean modal)
     {
         JDialog dialog = new JDialog(this, title, modal);
@@ -131,8 +139,15 @@ public class JDialogStation extends JFrame
         return dialog;
     }
 
+    public void putData(ArrayList<Integer> data){
+        if (panelModeling != null) {
+            panelModeling.putDataInTable(data);
+        }
+    }
+
     public static void main(String[] args)
     {
-        new JDialogStation();
+        JDialogStation dia = new JDialogStation();
+
     }
 }

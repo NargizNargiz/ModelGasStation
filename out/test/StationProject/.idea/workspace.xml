@@ -2,28 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ecece1dd-f1b3-4a6e-a17a-5edda0e20c4a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/finalVersion/Controller.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/finalVersion/View.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kotlinGui/ControlFrame.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kotlinGui/MainControlFrame.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/kotlinGui/ViewModeling.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/packageGui/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/packageGui/MyGui.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/ArrayPetrolStations" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/myDialog$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/myDialog$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/myDialog$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/myDialog$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/myDialog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/GuiKotlinKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/GuiKotlinKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/META-INF/StationProject.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/META-INF/StationProject.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/TestPrKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/TestPrKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/FunsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/org/FunsKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/GasStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/org/GasStation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/GeneratorsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/org/GeneratorsKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/MarkPetrol.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/org/MarkPetrol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/Model.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/org/Model.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/PetrolStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/org/PetrolStation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/Request.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/org/Request.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/org/TestRequestsKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/org/TestRequestsKt.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/packageGui/DialogPanel2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/packageGui/DialogPanel2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/packageGui/DialogPanel2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/packageGui/DialogPanel2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/packageGui/JDialogStation$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/packageGui/JDialogStation$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/packageGui/JDialogStation$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/packageGui/JDialogStation$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/packageGui/JDialogStation$TestKeyListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/packageGui/JDialogStation$TestKeyListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/packageGui/JDialogStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/StationProject/packageGui/JDialogStation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/StationProject/packageGui/ResultPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/StationProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/StationProject/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/test/StationProject/somefile4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/StationProject/somefile4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/StationProject/src/org/ArrayPetrolStations" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/StationProject/src/org/myDialog.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/StationProject/src/org/myDialog.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/StationProject/src/packageGui/ex3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/somefile4.txt" beforeDir="false" afterPath="$PROJECT_DIR$/somefile4.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TestProgram.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/GasStation.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/GasStation.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/StationProject/src/org/MarkPetrol.kt" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/StationProject/src/org/MarkPetrol.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/StationProject/src/org/Model.kt" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/StationProject/src/org/Model.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/StationProject/src/packageGui/DialogPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/StationProject/src/packageGui/DialogPanel2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/StationProject/src/packageGui/JDialogStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/StationProject/src/packageGui/JDialogStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/StationProject/src/packageGui/ResultPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/StationProject/src/testPr.kt" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/StationProject/src/testPr.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/MarkPetrol.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/MarkPetrol.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/Model.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/Model.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/org/programMain.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/funs.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/packageGui/DialogPanel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/packageGui/DialogPanel2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/packageGui/JDialogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/packageGui/JDialogStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/packageGui/ex3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/packageGui/myDialog.form" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/packageGui/myDialog.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/packageGui/JDialogStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/packageGui/JDialogStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/packageGui/ResultPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/packageGui/MyGraphics.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/testPr.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/testPr.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -37,63 +54,68 @@
     <session id="1136966417">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="38" />
+          <entry key="project.closed" value="46" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="4" />
           <entry key="project.open.time.11" value="5" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.13" value="2" />
-          <entry key="project.open.time.14" value="3" />
+          <entry key="project.open.time.14" value="4" />
           <entry key="project.open.time.15" value="2" />
           <entry key="project.open.time.16" value="1" />
-          <entry key="project.open.time.17" value="6" />
+          <entry key="project.open.time.17" value="8" />
           <entry key="project.open.time.18" value="4" />
           <entry key="project.open.time.182" value="1" />
           <entry key="project.open.time.21" value="2" />
+          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.27" value="1" />
           <entry key="project.open.time.29" value="1" />
+          <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="38" />
+          <entry key="project.opened" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ArrayPetrolStations" value="4" />
           <entry key="class" value="2" />
-          <entry key="form" value="9" />
+          <entry key="form" value="10" />
           <entry key="iml" value="3" />
-          <entry key="java" value="42" />
-          <entry key="kt" value="72" />
+          <entry key="java" value="58" />
+          <entry key="kt" value="91" />
           <entry key="md" value="2" />
           <entry key="puml" value="2" />
           <entry key="suml" value="1" />
-          <entry key="txt" value="9" />
+          <entry key="txt" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="2" />
-          <entry key="GUI_DESIGNER_FORM" value="9" />
+          <entry key="GUI_DESIGNER_FORM" value="10" />
           <entry key="IDEA_MODULE" value="3" />
-          <entry key="JAVA" value="42" />
-          <entry key="Kotlin" value="76" />
-          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="JAVA" value="58" />
+          <entry key="Kotlin" value="95" />
+          <entry key="PLAIN_TEXT" value="14" />
           <entry key="PlantUML file" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="ArrayPetrolStations" value="99" />
-          <entry key="java" value="6953" />
-          <entry key="kt" value="19093" />
+          <entry key="java" value="11246" />
+          <entry key="kt" value="24322" />
           <entry key="puml" value="2" />
-          <entry key="txt" value="121" />
+          <entry key="txt" value="124" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="6953" />
-          <entry key="Kotlin" value="19192" />
-          <entry key="PLAIN_TEXT" value="121" />
+          <entry key="JAVA" value="11246" />
+          <entry key="Kotlin" value="24421" />
+          <entry key="PLAIN_TEXT" value="124" />
           <entry key="PlantUML file" value="2" />
         </counts>
       </usages-collector>
@@ -105,37 +127,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/testPr.kt">
+        <entry file="file://$PROJECT_DIR$/src/kotlinGui/ControlFrame.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+            <state relative-caret-position="3247">
+              <caret line="200" column="10" selection-start-line="200" selection-start-column="10" selection-end-line="200" selection-end-column="10" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/GasStation.kt">
+        <entry file="file://$PROJECT_DIR$/src/kotlinGui/ViewModeling.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+            <state relative-caret-position="85">
+              <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/funs.kt">
+        <entry file="file://$PROJECT_DIR$/src/finalVersion/Controller.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
+            <state relative-caret-position="419">
+              <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+              <folding>
+                <element signature="e#21#76#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/MarkPetrol.kt">
+        <entry file="file://$PROJECT_DIR$/src/finalVersion/View.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="306">
+              <caret line="23" column="64" lean-forward="true" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+              <folding>
+                <element signature="e#22#189#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/packageGui/JDialogStation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1751">
+              <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/somefile4.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="383928">
+              <caret line="22584" column="12" selection-start-line="22584" selection-start-column="12" selection-end-line="22584" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/org/Model.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="782">
+              <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -144,34 +202,28 @@
         <entry file="file://$PROJECT_DIR$/src/org/TestRequests.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="6" selection-start-column="6" selection-end-column="6" />
+              <caret column="11" selection-start-column="11" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/Request.kt">
+        <entry file="file://$PROJECT_DIR$/src/testPr.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+            <state relative-caret-position="493">
+              <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/org/PetrolStation.kt">
+        <entry file="file://$PROJECT_DIR$/src/kotlinGui/MainControlFrame.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="62" column="27" lean-forward="true" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/org/Model.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
+            <state relative-caret-position="589">
+              <caret line="98" column="24" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="98" selection-end-column="24" />
+              <folding>
+                <element signature="e#20#169#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -185,8 +237,8 @@
         <option value="UML Sequence" />
         <option value="JUnit3 Test Class" />
         <option value="JUnit5 Test Class" />
-        <option value="Kotlin File" />
         <option value="Class" />
+        <option value="Kotlin File" />
       </list>
     </option>
   </component>
@@ -202,8 +254,11 @@
       <find>mark</find>
       <find>Ошибка общая очередь заявок пуста</find>
       <find>priceField8</find>
-      <find>set</find>
       <find>paint</find>
+      <find>pain</find>
+      <find>HashMap</find>
+      <find>set</find>
+      <find>scroll</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,21 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/week.kt" />
-        <option value="$PROJECT_DIR$/src/ArrayPetrolStations" />
-        <option value="$PROJECT_DIR$/src/Queue.java" />
-        <option value="$PROJECT_DIR$/src/guiKotlin.kt" />
-        <option value="$PROJECT_DIR$/src/diagram.puml" />
-        <option value="$PROJECT_DIR$/src/1.puml" />
-        <option value="$PROJECT_DIR$/somefile.txt" />
-        <option value="$PROJECT_DIR$/src/Request.kt" />
-        <option value="$PROJECT_DIR$/src/MarkPetrol.kt" />
-        <option value="$PROJECT_DIR$/src/GasStation.kt" />
-        <option value="$PROJECT_DIR$/src/Model.kt" />
-        <option value="$PROJECT_DIR$/src/ProgramMainKtTest.kt" />
-        <option value="$PROJECT_DIR$/src/programMain.kt" />
-        <option value="$PROJECT_DIR$/src/ProgramMainKtTest.java" />
-        <option value="$PROJECT_DIR$/src/ProgramMainKtTest1.kt" />
         <option value="$PROJECT_DIR$/src/pack/ProgramMainKtTest.kt" />
         <option value="$PROJECT_DIR$/src/PetrolStation.kt" />
         <option value="$PROJECT_DIR$/src/pack/ArrayPetrolStations" />
@@ -253,21 +293,38 @@
         <option value="$PROJECT_DIR$/src/packageGui/ex1.java" />
         <option value="$PROJECT_DIR$/src/packageGui/JWindowTest.java" />
         <option value="$PROJECT_DIR$/src/packageGui/dialogPanel2.java" />
-        <option value="$PROJECT_DIR$/src/packageGui/DialogPanel2.java" />
         <option value="$PROJECT_DIR$/src/packageGui/ex3.java" />
-        <option value="$PROJECT_DIR$/src/packageGui/ResultPanel.java" />
         <option value="$PROJECT_DIR$/src/packageGui/SimpleGUI.java" />
         <option value="$PROJECT_DIR$/src/TestProgram.kt" />
         <option value="$PROJECT_DIR$/src/org/PetrolStation.kt" />
         <option value="$PROJECT_DIR$/src/org/Request.kt" />
-        <option value="$PROJECT_DIR$/somefile4.txt" />
         <option value="$PROJECT_DIR$/src/exampleGui.java" />
         <option value="$PROJECT_DIR$/src/packageGui/JDialogTest.java" />
-        <option value="$PROJECT_DIR$/src/packageGui/JDialogStation.java" />
         <option value="$PROJECT_DIR$/src/org/programMain.kt" />
         <option value="$PROJECT_DIR$/src/org/GasStation.kt" />
+        <option value="$PROJECT_DIR$/somefile4.txt" />
+        <option value="$PROJECT_DIR$/src/packageGui/ResultPanel.java" />
+        <option value="$PROJECT_DIR$/src/packageGui/Graphics.java" />
+        <option value="$PROJECT_DIR$/src/packageGui/MyGraphics.java" />
+        <option value="$PROJECT_DIR$/src/packageGui/Main.java" />
+        <option value="$PROJECT_DIR$/src/packageGui/myGui.form" />
+        <option value="$PROJECT_DIR$/src/packageGui/GroupLayoutTest.java" />
+        <option value="$PROJECT_DIR$/src/packageGui/DialogPanel2.java" />
+        <option value="$PROJECT_DIR$/src/packageGui/myGui.java" />
+        <option value="$PROJECT_DIR$/src/packageGui/JDialogStation.java" />
+        <option value="$PROJECT_DIR$/src/packageGui/TestGuiWithKotlin.kt" />
+        <option value="$PROJECT_DIR$/src/packageGui/MyGui.java" />
+        <option value="$PROJECT_DIR$/src/kotlinGui/sub2dialog.kt" />
+        <option value="$PROJECT_DIR$/src/kotlinGui/subDialog.kt" />
+        <option value="$PROJECT_DIR$/src/org/MarkPetrol.kt" />
         <option value="$PROJECT_DIR$/src/testPr.kt" />
         <option value="$PROJECT_DIR$/src/org/Model.kt" />
+        <option value="$PROJECT_DIR$/src/kotlinGui/dialog1.kt" />
+        <option value="$PROJECT_DIR$/src/finalVersion/Controller.kt" />
+        <option value="$PROJECT_DIR$/src/kotlinGui/MainControlFrame.kt" />
+        <option value="$PROJECT_DIR$/src/kotlinGui/ControlFrame.kt" />
+        <option value="$PROJECT_DIR$/src/kotlinGui/ViewModeling.kt" />
+        <option value="$PROJECT_DIR$/src/finalVersion/View.kt" />
       </list>
     </option>
   </component>
@@ -276,6 +333,23 @@
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State />
+          <State>
+            <id>UI Form</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>BoundFieldAssignment</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -283,7 +357,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -300,18 +373,23 @@
               <item name="StationProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="StationProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="org" type="462c0819:PsiDirectoryNode" />
+              <item name="finalVersion" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="StationProject" type="b2602c69:ProjectViewProjectNode" />
               <item name="StationProject" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="packageGui" type="462c0819:PsiDirectoryNode" />
+              <item name="kotlinGui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="StationProject" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,7 +397,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="true" />
     <property name="Repository.Attach.JavaDocs" value="true" />
     <property name="Repository.Attach.Sources" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555073910478" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1555519258847" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit3" value="junit.framework.TestCase" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="junit.framework.TestCase" />
@@ -361,9 +439,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Kotlin.TestPrKt">
-    <configuration name="ResultPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="packageGui.ResultPanel" />
+  <component name="RunManager" selected="Kotlin.finalVersion.ControllerKt">
+    <configuration name="GroupLayoutTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="packageGui.GroupLayoutTest" />
       <module name="StationProject" />
       <extension name="coverage">
         <pattern>
@@ -375,8 +453,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="packageGui.SimpleGUI" />
+    <configuration name="JDialogStation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="packageGui.JDialogStation" />
       <module name="StationProject" />
       <extension name="coverage">
         <pattern>
@@ -388,8 +466,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="myDialog" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="packageGui.myDialog" />
+    <configuration name="JDialogStation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="packageGui.JDialogStation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="packageGui.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyGui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="packageGui.MyGui" />
       <module name="StationProject" />
       <extension name="coverage">
         <pattern>
@@ -401,46 +491,46 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestPrKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="finalVersion.ControllerKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="StationProject" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="TestPrKt" />
+      <option name="MAIN_CLASS_NAME" value="finalVersion.ControllerKt" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="org.ProgramMainKt" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
+    <configuration name="kotlinGui.MainControlFrame" type="JetRunConfigurationType" factoryName="Kotlin" temporary="true" nameIsGenerated="true">
       <module name="StationProject" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" value="org.ProgramMainKt" />
+      <option name="MAIN_CLASS_NAME" value="kotlinGui.MainControlFrame" />
       <option name="WORKING_DIRECTORY" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ResultPanel" />
-      <item itemvalue="Application.SimpleGUI" />
-      <item itemvalue="Kotlin.TestPrKt" />
-      <item itemvalue="Kotlin.org.ProgramMainKt" />
-      <item itemvalue="Application.myDialog" />
+      <item itemvalue="Application.MyGui" />
+      <item itemvalue="Application.GroupLayoutTest" />
+      <item itemvalue="Application.JDialogStation" />
+      <item itemvalue="Kotlin.kotlinGui.MainControlFrame" />
+      <item itemvalue="Kotlin.finalVersion.ControllerKt" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.TestPrKt" />
-        <item itemvalue="Application.myDialog" />
-        <item itemvalue="Kotlin.org.ProgramMainKt" />
-        <item itemvalue="Application.SimpleGUI" />
-        <item itemvalue="Application.ResultPanel" />
+        <item itemvalue="Kotlin.finalVersion.ControllerKt" />
+        <item itemvalue="Kotlin.kotlinGui.MainControlFrame" />
+        <item itemvalue="Application.JDialogStation" />
+        <item itemvalue="Application.MyGui" />
+        <item itemvalue="Application.GroupLayoutTest" />
       </list>
     </recent_temporary>
   </component>
@@ -467,9 +557,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" weight="0.19261745" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.14630872" />
       <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.36442953" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -487,12 +578,12 @@
       <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.49932885" weight="0.32907802" />
       <window_info anchor="bottom" id="DB Execution Console" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.50402683" weight="0.45673758" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.49932885" weight="0.32907802" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013423" side_tool="true" weight="0.3248227" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50067115" side_tool="true" weight="0.30070922" />
       <window_info anchor="bottom" id="Console" order="10" />
       <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4986577" weight="0.3248227" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49798658" weight="0.32340425" />
       <window_info anchor="bottom" id="Thumbnails" order="13" weight="0.32907802" />
       <window_info anchor="bottom" id="Dependency Viewer" order="14" weight="0.32907802" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -505,43 +596,6 @@
       <window_info anchor="right" id="Theme Preview" order="7" />
       <window_info anchor="right" id="PlantUML" order="8" weight="0.3295302" />
     </layout>
-    <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49787235" visible="true" weight="0.14899328" />
-      <window_info id="Structure" order="1" sideWeight="0.50212765" side_tool="true" weight="0.36442953" />
-      <window_info id="Designer" order="2" />
-      <window_info id="Image Layers" order="3" />
-      <window_info id="DB Browser" order="4" />
-      <window_info id="UI Designer" order="5" />
-      <window_info id="Project Explorer" order="6" />
-      <window_info id="Favorites" order="7" sideWeight="0.50212765" side_tool="true" weight="0.13087249" />
-      <window_info id="Capture Tool" order="8" />
-      <window_info id="Job Explorer" order="9" />
-      <window_info id="simpleUML" order="10" sideWeight="0.49787235" weight="0.36442953" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32907802" />
-      <window_info anchor="bottom" id="Debug" order="2" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="3" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="5" sideWeight="0.49932885" weight="0.32907802" />
-      <window_info anchor="bottom" id="DB Execution Console" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.50402683" visible="true" weight="0.45673758" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32907802" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5013423" side_tool="true" weight="0.3248227" />
-      <window_info anchor="bottom" id="Console" order="10" />
-      <window_info anchor="bottom" id="Version Control" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4986577" weight="0.3248227" />
-      <window_info anchor="bottom" id="Thumbnails" order="13" weight="0.32907802" />
-      <window_info anchor="bottom" id="Dependency Viewer" order="14" weight="0.32907802" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info anchor="right" id="Maven Projects" order="5" />
-      <window_info anchor="right" id="Palette&#9;" order="6" />
-      <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="right" id="PlantUML" order="8" weight="0.3295302" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -555,15 +609,15 @@
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/src/kotlinGui/ControlFrame.kt</url>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/out/production/StationProject/GasStation.class" />
-    <entry file="file://$PROJECT_DIR$/src/Queue.kt" />
-    <entry file="file://$PROJECT_DIR$/src/week.kt" />
-    <entry file="file://$PROJECT_DIR$/src/1.puml" />
-    <entry file="file://$PROJECT_DIR$/src/diagram.puml" />
     <entry file="file://$PROJECT_DIR$/src/ProgramMainKtTest.kt" />
     <entry file="file://$PROJECT_DIR$/src/ProgramMainKtTest1.kt" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/jre/lib/ext/nashorn.jar!/jdk/nashorn/internal/objects/Global.class">
@@ -613,13 +667,6 @@
     <entry file="file://$PROJECT_DIR$/StationProject.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/somefile4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="21925" column="50" selection-start-line="21925" selection-start-column="50" selection-end-line="21925" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/org/ArrayPetrolStations" />
     <entry file="file://$PROJECT_DIR$/src/exampleGui.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -643,36 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/packageGui/JDialogStation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1717">
-          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/packageGui/DialogPanel2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4182">
-          <caret line="246" column="57" lean-forward="true" selection-start-line="246" selection-start-column="57" selection-end-line="246" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/packageGui/ResultPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="5" lean-forward="true" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/petrolStationCountPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -681,26 +698,7 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TestProgram.kt" />
-    <entry file="file://$PROJECT_DIR$/src/packageGui/SimpleGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-295">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/guiKotlin.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#96#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/ex.suml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/ex.suml" />
     <entry file="file://$PROJECT_DIR$/src/org/generators.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
@@ -708,10 +706,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/testPr.kt">
+    <entry file="jar://$KOTLIN_BUNDLED$/lib/kotlin-stdlib-sources.jar!/kotlin/Primitives.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="19" column="29" lean-forward="true" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
+        <state relative-caret-position="102">
+          <caret line="388" column="3" lean-forward="true" selection-start-line="388" selection-start-column="3" selection-end-line="388" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/GasStation.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1666">
+          <caret line="98" column="1" selection-start-line="98" selection-start-column="1" selection-end-line="98" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -722,45 +727,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/GasStation.kt">
+    <entry file="file://$PROJECT_DIR$/src/org/Request.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
+        <state relative-caret-position="119">
+          <caret line="7" column="27" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/awt/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="1094" selection-start-line="1094" selection-end-line="1094" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packageGui/myGui.form" />
+    <entry file="file://$PROJECT_DIR$/src/packageGui/GroupLayoutTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/packageGui/MyGraphics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packageGui/TestGuiWithKotlin.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4">
+          <caret line="25" column="11" selection-start-line="25" selection-start-column="11" selection-end-line="25" selection-end-column="11" />
+          <folding>
+            <element signature="e#19#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packageGui/DialogPanel2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="239" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/HashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="137" column="13" selection-start-line="137" selection-start-column="13" selection-end-line="137" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packageGui/SimpleGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="16" column="60" selection-start-line="15" selection-start-column="8" selection-end-line="16" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packageGui/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="18" selection-start-column="8" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packageGui/MyGui.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="165" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/guiKotlin.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="26" column="1" selection-start-line="26" selection-start-column="1" selection-end-line="26" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/PetrolStation.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/MarkPetrol.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/awt/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="5625" column="29" selection-start-line="5625" selection-start-column="29" selection-end-line="5625" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/packageGui/JDialogStation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1751">
+          <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/somefile4.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383928">
+          <caret line="22584" column="12" selection-start-line="22584" selection-start-column="12" selection-end-line="22584" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/org/Model.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="51" column="22" selection-start-line="51" selection-start-column="22" selection-end-line="51" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/org/TestRequests.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="6" selection-start-column="6" selection-end-column="6" />
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/Model.kt">
+    <entry file="file://$PROJECT_DIR$/src/testPr.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="68" column="48" selection-start-line="68" selection-start-column="48" selection-end-line="68" selection-end-column="48" />
+        <state relative-caret-position="493">
+          <caret line="31" column="52" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/MarkPetrol.kt">
+    <entry file="file://$PROJECT_DIR$/src/finalVersion/Controller.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="419">
+          <caret line="67" column="33" selection-start-line="67" selection-start-column="33" selection-end-line="67" selection-end-column="33" />
+          <folding>
+            <element signature="e#21#76#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/Request.kt">
+    <entry file="file://$PROJECT_DIR$/src/kotlinGui/ControlFrame.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        <state relative-caret-position="3247">
+          <caret line="200" column="10" selection-start-line="200" selection-start-column="10" selection-end-line="200" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/org/PetrolStation.kt">
+    <entry file="file://$PROJECT_DIR$/src/kotlinGui/ViewModeling.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6">
-          <caret line="62" column="27" lean-forward="true" selection-start-line="62" selection-start-column="27" selection-end-line="62" selection-end-column="27" />
+        <state relative-caret-position="85">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/finalVersion/View.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="23" column="64" lean-forward="true" selection-start-line="23" selection-start-column="64" selection-end-line="23" selection-end-column="64" />
+          <folding>
+            <element signature="e#22#189#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/kotlinGui/MainControlFrame.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="98" column="24" lean-forward="true" selection-start-line="21" selection-start-column="8" selection-end-line="98" selection-end-column="24" />
+          <folding>
+            <element signature="e#20#169#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
