@@ -1,32 +1,38 @@
 package finalVersion
 
-import kotlinGui1.ViewModeling
-import org.*
-import packageGui.JDialogStation
 import java.awt.Color
+import java.awt.Container
 import java.awt.Dimension
 import java.awt.FlowLayout
 import java.awt.event.KeyEvent
 import java.awt.event.KeyListener
+import java.util.*
 import javax.swing.*
 import javax.swing.border.EmptyBorder
 
 interface Observer{
-    fun update()
-    fun updateTable()
+    fun update(serve:Int,notServe:Int, profit:Double, avgProfit:Double)
+    fun updateTable(gasSt: GasStation)
+    fun finish()
 }
 
-class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
+class View(_controller: ControllerInterface): JFrame(), Observer{
     var controller : ControllerInterface = _controller
-    var model: Model = _model
+//    var model: Model = _model
+
 //  интерфейс главного окна
     private val mainFrame = JFrame()
+
     private val nameStationField: JTextField =JTextField(15)
+    private val nameStLabel = JLabel("Название станции:")
     private val markUpField: JTextField = JTextField(15)
+    private val markUpFieldLabel = JLabel("Наценка:")
     private val maxLenQueueField: JTextField = JTextField(15)
+    private val maxLenQLabel = JLabel("Максимальная длина очереди у автомата:")
     private val countPetrolStField: JTextField = JTextField(15)
+    private val countPetrolLabel = JLabel("Количество автоматов на станции:")
+
     private var mapDataFromFields: Map<String, String> = mapOf()
-    private var panelModeling: ViewModeling? = null
 
 //  интерфейс окна настройки автоматов
     private var mapMarksCount: Map<String, String>? = null
@@ -52,6 +58,9 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
     private val tab4: JTable = JTable(5, 9)
     private val tab5: JTable = JTable(5, 9)
     private val tab6: JTable = JTable(5, 9)
+
+    private val boxStepsButtons = Box.createVerticalBox()
+
     private val butStep1 = JButton("Шаг 10 минут")
     private val butStep2 = JButton("Шаг 30 минут")
     private val butStep3 = JButton("Шаг 60 минут")
@@ -61,62 +70,122 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
     private val but4: JButton = JButton("A95")
     private val but5: JButton = JButton("A98")
     private val but6: JButton = JButton("A100")
-    private val nextBut: JButton = JButton("Next step")
+    private val weekBut: JButton = JButton("7 дней")
+    private val dayBut: JButton = JButton("1 день")
 
-    init{
-        model.registerObserver(this)
+    private val nextBut: JButton = JButton("Следующий шаг")
+    private val viewStepLabel = JLabel("Шаг               ")
+    private val viewStepValue =JLabel()
 
-    }
+    private val boxRes = Box.createHorizontalBox()
+
+    private val timer = JLabel("Время:")
+    private val timerVal = JLabel()
+    private val timerEvent = JLabel("Время поступления запроса: ")
+    private val timerEventVal = JLabel()
+
+    private val boxViewParams = Box.createVerticalBox()
+    private val boxViewParamsValue = Box.createVerticalBox()
+
+
+    private val nameValue= JLabel()
+    private val markUpValue = JLabel()
+    private val countsPumpValue = JLabel()
+    private val maxLenValue = JLabel()
+
+    private val profitLabel = JLabel("Общая прибыль")
+
+    private val profitValue = JLabel()
+    private val avgProfitValue = JLabel()
+
+    private val serveValue = JLabel()
+    private val notServeValue= JLabel()
+
+    private val serveLabel = JLabel("Обслужено")
+    private val notServeLabel= JLabel("Не обслужено")
+
+    private val dayValue = JLabel()
+
+    private val convertTimeLabel = JLabel()
+
+    private val volumeLabel = JLabel("Объем проданного бензина (л):")
+    private val avgVolumeLabel = JLabel("Средний объем проданного бензина в день:")
+    private val volumeValue = JLabel()
+    private val avgVolumeValue = JLabel()
+
+
+    private val avgVolumeHourLabel = JLabel("Средний объем проданного бензина в час:")
+    private val avgVolumeHourValue = JLabel()
+
+
+    private val box1 = Box.createVerticalBox()
+    private val box2 = Box.createVerticalBox()
+    private val box3 = Box.createVerticalBox()
+    private val box4 = Box.createVerticalBox()
+    private val box5 = Box.createVerticalBox()
+    private val box6 = Box.createVerticalBox()
+
+
+    private val boxH1 = Box.createHorizontalBox()
+    private val boxH2 = Box.createHorizontalBox()
+    private val boxVer = Box.createVerticalBox()
+
+    private val boxModelingButtons : Box = Box.createVerticalBox()
+    private val boxTime = Box.createVerticalBox()
+
+    private var container1 = Container()
+
     fun createView(){
 //        val dialogPanel = MainControlFrame(controller)
-
         mainFrame.title = "Модель: бензозаправочная станция"
         mainFrame.defaultCloseOperation = EXIT_ON_CLOSE
-        // Кнопки для создания диалоговых окон
         val box1 = Box.createHorizontalBox()
-        val nameStLabel = JLabel("Название cтанции:")
         box1.add(nameStLabel)
         box1.add(Box.createHorizontalStrut(6))
         box1.add(nameStationField)
 
         val box2 = Box.createHorizontalBox()
-        val markUpFieldLabel = JLabel("Наценка:")
         box2.add(markUpFieldLabel)
         box2.add(Box.createHorizontalStrut(6))
         box2.add(markUpField)
 
         val box3 = Box.createHorizontalBox()
-        val maxLenQLabel = JLabel("Максимальная длина очереди у автомата:")
         box3.add(maxLenQLabel)
         box3.add(Box.createHorizontalStrut(6))
         box3.add(maxLenQueueField)
 
 
         val box4 = Box.createHorizontalBox()
-        val countPetrolLabel = JLabel("Количество автоматов на станции:")
         box4.add(countPetrolLabel)
         box4.add(Box.createHorizontalStrut(6))
         box4.add(countPetrolStField)
 
         val ok = JButton("Начать моделирование")
         ok.addActionListener {
-            //            setValuesMap()
-//            printData()
             if (fieldsIsCorrect() && setMapMarksCount() && setMapMarksPrices()) {
-                controller.setPrimarySetting(
-                    nameStationField.getText(),
-                    markUpField.getText().toInt(),
-                    maxLenQueueField.getText().toInt(),
-                    countPetrolStField.getText().toInt(),
-                    mapMarksCount,
-                    mapMarksPrices
-                )
-                setValuesMap()
-                controller.setStartModeling()
+                var mess = ""
+                var flag = 0
+                if (markUpField.text.toInt() > 15 || markUpField.text.toInt() < 5){
+                    mess += "Наценка должна находится в диапазоне от 5 до 15% \n"
+                    flag++
+                }
+                if (maxLenQueueField.text.toInt() > 9 || maxLenQueueField.text.toInt() < 5){
+                    mess += "Максимальная длина очереди должна находится в диапазоне от 5 до 9 машин \n"
+                    flag++
+                }
+                if (flag >0){
+                    JOptionPane.showMessageDialog(this,mess,"Ошибка ввода",1)
+                }else {
+                    controller.setPrimarySettings(
+                        nameStationField.text, markUpField.text.toInt(),
+                        maxLenQueueField.text.toInt(), countPetrolStField.text.toInt(), mapMarksCount, mapMarksPrices
+                    )
+                    setValuesMap()
+                    controller.startModeling()
+                }
             }else{
                 JOptionPane.showMessageDialog(this,"Введены неверные данные, попробуйте еще раз","Ошибка ввода",1)
             }
-//            panelModeling = ViewModeling()
         }
         val mainBox = Box.createVerticalBox()
         mainBox.border = EmptyBorder(20, 20, 20, 20)
@@ -135,8 +204,14 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
 
         val button2 = JButton("Настройка параметров автоматов")
         button2.addActionListener {
-            if (fieldsIsCorrect()) {
-                controller.setStartSettings()
+            if (fieldsIsCorrect()){
+                if (countPetrolStField.text.toInt() < 6){
+                    JOptionPane.showMessageDialog(this,"Количество автоматов находится в диапазоне от 6 до 30 штук","Ошибка ввода",1)
+                }else{
+                    println(mapDataFromFields)
+                    controller.startSettingsPumps()
+                }
+
             }else{
                 JOptionPane.showMessageDialog(this,"Введены неверные данные, попробуйте еще раз","Ошибка ввода",1)
             }
@@ -151,16 +226,14 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
         mainFrame.setSize(500, 300)
         mainFrame.isVisible = true
     }
-
     private fun fieldsIsCorrect(): Boolean {
-        val list = listOf(nameStationField.getText(),markUpField.getText(),maxLenQueueField.getText(),countPetrolStField.getText())
-        if (list.all{it.length>0}){
+        val list = listOf(nameStationField.text,markUpField.text,maxLenQueueField.text,countPetrolStField.text)
+        if (list.all{ it.isNotEmpty()}){
+            setValuesMap()
             return true
         }
         return false
-
     }
-
     class TestKeyListener : KeyListener {
         override fun keyTyped(e: KeyEvent) {}
         override fun keyPressed(event: KeyEvent) {
@@ -170,20 +243,16 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
         }
         override fun keyReleased(e: KeyEvent) {}
     }
-    fun setValuesMap() {
+    private fun setValuesMap() {
         mapDataFromFields = mapOf(Pair("StationName",nameStationField.text),
-            Pair("MarkUp",markUpField.text),
             Pair("MarkUp",markUpField.text),
             Pair("MaxLenQueue",maxLenQueueField.text),
             Pair("CountAutomate", countPetrolStField.text))
     }
     fun createControls(){
-//        val subDialogControl = ControlFrame(controller)
-
-        val dialog = JDialog(mainFrame, title, true)
+        val dialog = JDialog(mainFrame, "Настройка бензозаправочных колонок", true)
         dialog.defaultCloseOperation = WindowConstants.DISPOSE_ON_CLOSE
         dialog.setSize(400, 600)
-//            createDialog("Настройка автоматов с бензином", true)
 
         val box11 = Box.createVerticalBox()
         val stationLabel1 = JLabel("A80:")
@@ -324,7 +393,7 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
         vBox.add(h6Box)
         vBox.add(Box.createVerticalStrut(10))
 
-        val keyL = JDialogStation.TestKeyListener()
+        val keyL = TestKeyListener()
         stationField1!!.addKeyListener(keyL)
         stationField2!!.addKeyListener(keyL)
         stationField3!!.addKeyListener(keyL)
@@ -342,9 +411,19 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
         val ok = JButton("OK")
         ok.addActionListener {
             if (setMapMarksCount() && setMapMarksPrices()){
-                controller.setSettingsPumps(mapMarksCount,mapMarksPrices)
-                dialog.isVisible = false
-
+                val count = mapDataFromFields["CountAutomate"]?.toInt()?:0
+//                controller.setSettingsPumps(mapMarksCount,mapMarksPrices)
+                var sum = 0
+                for (elem in mapMarksCount!!.values){
+                    val elemInt = elem.toInt()
+                    sum += elemInt
+                }
+                println(sum)
+                if (count != sum){
+                    JOptionPane.showMessageDialog(this,"Общее количество автоматов должно быть $count","Ошибка ввода",1)
+                }else {
+                    dialog.isVisible = false
+                }
             }else{
                 JOptionPane.showMessageDialog(this,"Введены неверные данные, попробуйте еще раз","Ошибка ввода",1)
             }
@@ -359,12 +438,13 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
         dialog.add(panel)
         dialog.isResizable = true
         dialog.isVisible = true
-
     }
-
-    fun setMapMarksCount():Boolean {
+    private fun setMapMarksCount():Boolean {
         val list = listOf(stationField1,stationField2,stationField3,stationField4,stationField5,stationField6)
-        if (list.all { it!!.getText().length > 0}) {
+        if (list.any { it == null }){
+            return false
+        }
+        if (list.all { it!!.text.isNotEmpty() }) {
             mapMarksCount = mapOf(
                 Pair("A80", stationField1!!.text),
                 Pair("A90", stationField2!!.text),
@@ -377,10 +457,12 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
         }
         return false
     }
-
-    fun setMapMarksPrices():Boolean {
+    private fun setMapMarksPrices():Boolean {
         val list = listOf(priceField1,priceField2,priceField3,priceField4,priceField5,priceField6)
-        if (list.all { it!!.getText().length > 0}) {
+        if (list.any { it == null }){
+            return false
+        }
+        if (list.all { it!!.text.isNotEmpty() }) {
             mapMarksPrices = mapOf(
                 Pair("A80", priceField1!!.text),
                 Pair("A90", priceField2!!.text),
@@ -393,14 +475,10 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
         }
         return false
     }
-
     fun createModelViewFrame(){
-//        var modelinView = ViewModeling()
-//        val dialog1 = createDialog("Настройка автоматов", true,this)
-        val dialog1 = JDialog(mainFrame, title, true)
+        val dialog1 = JDialog(mainFrame, "Моделирование станции: ${mapDataFromFields["StationName"]}", true)
         dialog1.defaultCloseOperation = WindowConstants.DISPOSE_ON_CLOSE
-        dialog1.setBounds(300, 100, 1300, 900)
-
+        dialog1.setBounds(200, 100, 900, 900)
         tab1.rowHeight = 20
         tab2.rowHeight = 20
         tab3.rowHeight = 20
@@ -454,57 +532,84 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
         tab6.showVerticalLines = true
         tab6.autoResizeMode = JTable.AUTO_RESIZE_OFF
 
-        val container1 = contentPane
-        container1.layout = FlowLayout(FlowLayout.LEFT, 100, 10)
+        container1 = contentPane
+        container1.layout = FlowLayout(FlowLayout.LEFT, 100, 20)
 
-        val box1 = Box.createVerticalBox()
+
         box1.add(but1)
         box1.add(Box.createVerticalStrut(10))
         box1.add(tab1)
-        //        JScrollPane scroll = new JScrollPane(tab1);
-        //        scroll.setBorder(BorderFactory.createEmptyBorder(50,100,50,100));
-        //        box1.add(scroll);
-        //        scroll.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-        val box2 = Box.createVerticalBox()
         box2.add(but2)
         box2.add(Box.createVerticalStrut(10))
         box2.add(tab2)
-        val box3 = Box.createVerticalBox()
+
         box3.add(but3)
         box3.add(Box.createVerticalStrut(10))
         box3.add(tab3)
-        val box4 = Box.createVerticalBox()
+
         box4.add(but4)
         box4.add(Box.createVerticalStrut(10))
         box4.add(tab4)
-        val box5 = Box.createVerticalBox()
+
         box5.add(but5)
         box5.add(Box.createVerticalStrut(10))
         box5.add(tab5)
 
-        val box6 = Box.createVerticalBox()
+
         box6.add(but6)
         box6.add(Box.createVerticalStrut(10))
         box6.add(tab6)
 
+        but1.addActionListener {
+            controller.getInfoPump(dialog1, MarkPetrol.A80)
+        }
+        but2.addActionListener {
+            controller.getInfoPump(dialog1, MarkPetrol.A90)
+        }
+        but3.addActionListener {
+            controller.getInfoPump(dialog1, MarkPetrol.A92)
+        }
+        but4.addActionListener {
+            controller.getInfoPump(dialog1, MarkPetrol.A95)
+        }
+        but5.addActionListener {
+            controller.getInfoPump(dialog1, MarkPetrol.A98)
+        }
+        but6.addActionListener {
+            controller.getInfoPump(dialog1, MarkPetrol.A100)
+        }
 
-        val box7 = Box.createVerticalBox()
+        butStep1.addActionListener{
+            controller.setStep(10)
+            viewStepValue.text = "10"
+        }
+        boxStepsButtons.add(butStep1)
+        boxStepsButtons.add(Box.createVerticalStrut(10))
 
-        box7.add(butStep1)
-        box7.add(Box.createVerticalStrut(10))
-        box7.add(butStep2)
-        box7.add(Box.createVerticalStrut(10))
-        box7.add(butStep3)
+        butStep2.addActionListener{
+            controller.setStep(30)
+            viewStepValue.text = "30"
+        }
+        boxStepsButtons.add(butStep2)
+        boxStepsButtons.add(Box.createVerticalStrut(10))
 
-        val boxH1 = Box.createHorizontalBox()
+        butStep3.addActionListener{
+            controller.setStep(60)
+            viewStepValue.text = "60"
+        }
+
+        boxStepsButtons.add(butStep3)
+
+
+
         boxH1.add(box1)
         boxH1.add(Box.createHorizontalStrut(30))
         boxH1.add(box2)
         boxH1.add(Box.createHorizontalStrut(30))
         boxH1.add(box3)
 
-        val boxH2 = Box.createHorizontalBox()
+
         boxH2.add(box4)
         boxH2.add(Box.createHorizontalStrut(30))
         boxH2.add(box5)
@@ -512,40 +617,228 @@ class View(_controller: ControllerInterface, _model: Model): JFrame(), Observer{
         boxH2.add(box6)
 
 
-        val boxVer = Box.createVerticalBox()
+
         boxVer.add(boxH1)
         boxVer.add(Box.createVerticalStrut(30))
         boxVer.add(boxH2)
+        boxVer.add(Box.createVerticalStrut(30))
 
 
-        container1.add(boxVer)
-//        container1.add(box2)
-//        container1.add(box3)
-//        container1.add(box4)
-//        container1.add(box5)
-//        container1.add(box6)
+
+        boxViewParams.add(nameStLabel)
+        boxViewParams.add(Box.createVerticalStrut(10))
+        boxViewParams.add(markUpFieldLabel)
+        boxViewParams.add(Box.createVerticalStrut(10))
+        boxViewParams.add(countPetrolLabel)
+        boxViewParams.add(Box.createVerticalStrut(10))
+        boxViewParams.add(maxLenQLabel)
+        boxViewParams.add(Box.createVerticalStrut(10))
+
+        boxViewParams.add(profitLabel)
+        boxViewParams.add(Box.createVerticalStrut(10))
+
+        boxViewParams.add(serveLabel)
+        boxViewParams.add(Box.createVerticalStrut(10))
+        boxViewParams.add(notServeLabel)
+        boxViewParams.add(Box.createVerticalStrut(10))
+        boxViewParams.add(viewStepLabel)
+        boxViewParams.add(Box.createVerticalStrut(10))
+        boxViewParams.add(volumeLabel)
+        boxViewParams.add(Box.createVerticalStrut(10))
+        boxViewParams.add(avgVolumeLabel)
+        boxViewParams.add(Box.createVerticalStrut(10))
+        boxViewParams.add(avgVolumeHourLabel)
+        boxViewParams.add(Box.createVerticalStrut(10))
+
+
+        boxViewParamsValue.add(nameValue)
+        boxViewParamsValue.add(Box.createVerticalStrut(10))
+        boxViewParamsValue.add(markUpValue)
+        boxViewParamsValue.add(Box.createVerticalStrut(10))
+        boxViewParamsValue.add(countsPumpValue)
+        boxViewParamsValue.add(Box.createVerticalStrut(10))
+        boxViewParamsValue.add(maxLenValue)
+        boxViewParamsValue.add(Box.createVerticalStrut(10))
+        boxViewParamsValue.add(profitValue)
+        boxViewParamsValue.add(Box.createVerticalStrut(10))
+
+
+        boxViewParamsValue.add(serveValue)
+        boxViewParamsValue.add(Box.createVerticalStrut(10))
+        boxViewParamsValue.add(notServeValue)
+        boxViewParamsValue.add(Box.createVerticalStrut(10))
+        boxViewParamsValue.add(viewStepValue)
+        boxViewParamsValue.add(Box.createVerticalStrut(10))
+        boxViewParamsValue.add(volumeValue)
+        boxViewParamsValue.add(Box.createVerticalStrut(10))
+        boxViewParamsValue.add(avgVolumeValue)
+        boxViewParamsValue.add(Box.createVerticalStrut(10))
+        boxViewParamsValue.add(avgVolumeHourValue)
+        boxViewParamsValue.add(Box.createVerticalStrut(10))
+
+
+
+
+        boxRes.border = BorderFactory.createTitledBorder("Параметры")
+        boxRes.add(boxViewParams)
+        boxRes.add(Box.createHorizontalStrut(10))
+        boxRes.add(boxViewParamsValue)
+        boxRes.add(Box.createHorizontalStrut(10))
+
+
+        boxModelingButtons.add(nextBut)
+        boxModelingButtons.add(Box.createVerticalStrut(10))
+        boxModelingButtons.add(dayBut)
+        boxModelingButtons.add(Box.createVerticalStrut(10))
+        boxModelingButtons.add(weekBut)
+        boxModelingButtons.add(Box.createVerticalStrut(10))
+
+        nextBut.addActionListener{ controller.stepByStepDo()}
+        dayBut.addActionListener{controller.getStateAfterDay(60*24)}
+        weekBut.addActionListener{controller.continuouslyDo()}
+
+        boxTime.add(timer)
+        boxTime.add(Box.createVerticalStrut(10))
+        boxTime.add(timerVal)
+        boxTime.add(Box.createVerticalStrut(10))
+        boxTime.add(timerEvent)
+        boxTime.add(Box.createVerticalStrut(10))
+        boxTime.add(timerEventVal)
+        boxTime.add(Box.createVerticalStrut(10))
+        boxTime.add(dayValue)
+
+//        val boxDayTime = Box.createHorizontalBox()
+//
+//        boxDayTime.add(dayValue)
+//        boxDayTime.add(Box.createHorizontalStrut(10))
+//        boxDayTime.add(convertTimeLabel)
+//        boxDayTime.add(Box.createHorizontalStrut(10))
+
+//        boxTime.add(boxDayTime)
+
         container1.layout = FlowLayout(FlowLayout.LEFT, 100, 10)
-        container1.add(box7)
-//        container1.add(butStep1)
-//        container1.add(butStep2)
-//        container1.add(butStep3)
+        container1.add(boxVer)
+        container1.layout = FlowLayout(FlowLayout.LEFT, 100, 10)
+        container1.add(boxRes)
+        container1.layout = FlowLayout(FlowLayout.LEFT, 100, 10)
+        container1.add(boxModelingButtons)
+        container1.layout = FlowLayout(FlowLayout.LEFT, 100, 10)
+        container1.add(boxStepsButtons)
+        container1.layout = FlowLayout(FlowLayout.LEFT, 100, 10)
+        container1.add(boxTime)
 
-        container1.layout = FlowLayout(FlowLayout.RIGHT, 100, 10)
-        container1.add(nextBut)
+        viewParams()
+        viewCounts(0,0)
+
         dialog1.add(container1)
-        dialog1.pack()
+//        dialog1.pack()
+        dialog1.setSize(1400,700)
         dialog1.isResizable = true
         dialog1.isVisible = true
 
     }
-    override fun update() {
-
+    override fun update(serve:Int,notServe:Int, profit:Double, avgProfit:Double) {
+        viewProfit(profit)
+        viewCounts(serve,notServe)
     }
-
-    override fun updateTable() {
-        for( i in 0 until tab1.columnCount){
-            tab1.setValueAt(i,0,i)
+    private fun pasteTab(row: Int, pump: PetrolStation){
+        val reqs: Deque<Request> = pump.requests
+        val arr = reqs.toTypedArray()
+        if (reqs.isNotEmpty()){
+            val sizeQueue = reqs.size
+            for (col in 0 until tab1.columnCount){
+                if (col < sizeQueue){
+                    when (pump.mark) {
+                        MarkPetrol.A80 -> tab1.setValueAt(arr[col].index, row, col)
+                        MarkPetrol.A90 -> tab2.setValueAt(arr[col].index, row, col)
+                        MarkPetrol.A92 -> tab3.setValueAt(arr[col].index, row, col)
+                        MarkPetrol.A95 -> tab4.setValueAt(arr[col].index, row, col)
+                        MarkPetrol.A98 -> tab5.setValueAt(arr[col].index, row, col)
+                        MarkPetrol.A100 -> tab6.setValueAt(arr[col].index, row, col)
+                        else -> {
+                        }
+                    }
+                }else{
+                    when (pump.mark){
+                        MarkPetrol.A80 -> tab1.setValueAt(' ', row, col)
+                        MarkPetrol.A90 -> tab2.setValueAt(' ', row, col)
+                        MarkPetrol.A92 -> tab3.setValueAt(' ', row, col)
+                        MarkPetrol.A95 -> tab4.setValueAt(' ', row, col)
+                        MarkPetrol.A98 -> tab5.setValueAt(' ', row, col)
+                        MarkPetrol.A100-> tab6.setValueAt(' ', row, col)
+                        else -> {}
+                    }
+                }
+            }
+        }else{
+            for (col in 0 until tab1.columnCount){
+                when (pump.mark){
+                    MarkPetrol.A80 -> tab1.setValueAt(' ', row, col)
+                    MarkPetrol.A90 -> tab2.setValueAt(' ', row, col)
+                    MarkPetrol.A92 -> tab3.setValueAt(' ', row, col)
+                    MarkPetrol.A95 -> tab4.setValueAt(' ', row, col)
+                    MarkPetrol.A98 -> tab5.setValueAt(' ', row, col)
+                    MarkPetrol.A100-> tab6.setValueAt(' ', row, col)
+                    else -> {}
+                }
+            }
+        }
+        return
+    }
+    override fun updateTable(gasSt:GasStation) {
+//        val gasSt = model.getGasStation()
+        val pumps = gasSt.getArrPetrolStation()
+        var j = 0
+        while ( j < pumps.size){
+            var i = 0
+            while (i < pumps[j].countSameMarkPetrol ){
+//              println("вставляю в $i-ую очередь автомата ${pumps[j]}")
+                pasteTab(i, pumps[j+i])
+                i++
+            }
+            j += i
         }
     }
 
+    private fun viewParams(){
+        nameValue.text = mapDataFromFields["StationName"]
+        markUpValue.text = mapDataFromFields["MarkUp"]
+        countsPumpValue.text = mapDataFromFields["CountAutomate"]
+        maxLenValue.text = mapDataFromFields["MaxLenQueue"]
+        profitValue.text = "0"
+        avgProfitValue.text = "0"
+        viewStepValue.text ="0"
+    }
+    fun viewCounts(serve:Int, notServe: Int){
+        serveValue.text = "$serve"
+        notServeValue.text = "$notServe"
+    }
+    fun viewProfit(profit:Double){
+        profitValue.text = "$profit"
+    }
+    fun viewVolume(volume: String){
+        volumeValue.text = volume
+    }
+    fun viewAvgVolumeDay(avg: String){
+        avgVolumeValue.text = avg
+    }
+    fun viewAvgVolumeHour(avg: String){
+        avgVolumeHourValue.text = avg
+    }
+    fun viewDay(day:String){
+        dayValue.text = day
+    }
+    fun viewConvertGlobalTime(convertTime: String){
+        timerVal.text = convertTime
+    }
+    fun viewConvertEventTime(convertTime: String){
+        timerEventVal.text = convertTime
+    }
+    fun viewInfoPump(p: JDialog, mess:String){
+        JOptionPane.showMessageDialog(p,mess,"Информации о колонке",1)
+    }
+
+    override fun finish() {
+        controller.viewAllParams()
+    }
 }

@@ -1,8 +1,7 @@
 package org
 
 import java.io.*
-import java.util.*
-import createSt
+import finalVersion.GasStation
 
 fun myWriter(writer: BufferedWriter,gasSt: GasStation){
 //    writer.write("Arrays of same mark's number: \n")

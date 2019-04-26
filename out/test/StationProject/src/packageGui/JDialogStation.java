@@ -5,7 +5,6 @@ import javax.swing.border.EmptyBorder;
 import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.HashMap;
-import static packageGui.TestGuiWithKotlinKt.*;
 
 
 public class JDialogStation extends JFrame
@@ -57,9 +56,9 @@ public class JDialogStation extends JFrame
             @Override
             public void actionPerformed(ActionEvent e) {
                 setValuesMap();
-                printData();
+//                TestGuiWithKotlinKt.printData();
                 panelModeling = new MyGui();
-                myRun(panelModeling);
+//                TestGuiWithKotlinKt.myRun(panelModeling);
 
             }
         });
@@ -121,7 +120,7 @@ public class JDialogStation extends JFrame
         mapDataFromFields.put("MarkUp",markUpField.getText());
         mapDataFromFields.put("MaxLenQueue",maxLenQueueField.getText());
         mapDataFromFields.put("CountAutomate",countPetrolStField.getText());
-        saveData("data",mapDataFromFields);
+//        saveData("data",mapDataFromFields);
     }
 
 

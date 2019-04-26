@@ -1,3 +1,5 @@
+import finalVersion.Model
+import finalVersion.Request
 import org.*
 import java.io.File
 import java.util.*
@@ -5,41 +7,38 @@ import java.util.*
 fun createSt(name:String, markUp: Int, maxLenQue:Int,
              sizeGeneralQueue: Int, countPumps:Int,
              counts: Map<String,String>, prices :Map<String,String>): Model {
-
-    val firstTestModel = Model(name, markUp,countPumps)
-    val generalQueue: Deque<Request>
-
+    val firstTestModel = Model(name, markUp, countPumps)
     firstTestModel.setMaxLen(maxLenQue)
     firstTestModel.createGasStation(counts, prices)
-    firstTestModel.queueRequests(sizeGeneralQueue, firstTestModel.getGasStation())
-    generalQueue = firstTestModel.getGasStation().getNewRequests()
-    generalQueue.forEach{ it.setfillTime(0.2777)}
+    firstTestModel.queueRequests(sizeGeneralQueue)
+//    generalQueue = firstTestModel.getGasStation().getNewRequests1()
+    firstTestModel.getNewRequests().forEach{ it.setfillTime(0.2777)}
     return firstTestModel
 }
 
-fun programRun1(model:Model) {
+fun programRun1(model: Model) {
     val sizeGeneralQueue = 14
     var countInputRequests: Int = 0
     val beginInterval = 3
     val endInterval = 15
 //  инициализация модели: создали модель с наценкой и названием
 //   val firstTestModel = createSt(s,5,1,sizeGeneralQueue,6, mapOf(), mapOf())
-   val firstTestModel = model
+    val firstTestModel = model
     countInputRequests += sizeGeneralQueue
-    var segment = firstTestModel.getRandomSegment(beginInterval,endInterval)
+    var segment = firstTestModel.setRandomSegment(beginInterval,endInterval)
     println(segment)
-//    var generalQueue = firstTestModel.getGasStation().getNewRequests()
+//    var generalQueue = firstTestModel.getGasStation().getNewRequests1()
 //    var generalQueue = initArrReqs()
-    var generalQueue = firstTestModel.getGasStation().getNewRequests()
+    var generalQueue = firstTestModel.getNewRequests()
     val writer = File("somefile5.txt").bufferedWriter()
     writer.write("AllRequets: \n")
     generalQueue.forEach{writer.write("${it}\n")}
-//    firstTestModel.getGasStation().getNewRequests().forEach{writer.write("${it}\n") }
+//    firstTestModel.getGasStation().getNewRequests1().forEach{writer.write("${it}\n") }
     var timeGlob = 0
     var timeEvent = 0
     var step = 10
     val wholeTime = 10080
-    var req :Request
+    var req : Request
     while(timeGlob <= wholeTime ){
 //        println("tg = $timeGlob, tr =  $timeEvent")
         if(!generalQueue.isEmpty()){
@@ -59,14 +58,14 @@ fun programRun1(model:Model) {
                 }
                 myWriter(writer,firstTestModel.getGasStation())
             }else{
-                segment = firstTestModel.getRandomSegment(beginInterval,endInterval)
+                segment = firstTestModel.setRandomSegment(beginInterval,endInterval)
 //                println(segment)
             }
         }else{
 //            println("Главная очередь пуста")
 //            break
-            firstTestModel.queueRequests(sizeGeneralQueue, firstTestModel.getGasStation())
-            generalQueue = firstTestModel.getGasStation().getNewRequests()
+            firstTestModel.queueRequests(sizeGeneralQueue)
+            generalQueue = firstTestModel.getNewRequests()
             countInputRequests +=sizeGeneralQueue
         }
     }

@@ -1,80 +1,105 @@
 package finalVersion
 import createSt
-import org.Model
-import programRun1
-import kotlin.math.max
+import javax.swing.JDialog
+import kotlin.math.round
 
 interface ControllerInterface{
-    fun start()
-    fun setStep()
-    fun stop()
+    fun setStep(step: Int)
     fun stepByStepDo()
-    fun continuoslyDo()
-    fun setPrimarySetting(name: String, markUp: Int, maxLen : Int,countPumps :Int,counts :Map<String,String>?, prices:Map<String,String>?)
-    fun setSettingsPumps(counts :Map<String,String>?, prices:Map<String,String>?)
-    fun setStartModeling()
-    fun setStartSettings()
-    fun errorOfInput()
+    fun continuouslyDo()
+    fun setPrimarySettings(name: String, markUp: Int, maxLen : Int, countPumps :Int, counts :Map<String,String>?, prices:Map<String,String>?)
+    fun startModeling()
+    fun startSettingsPumps()
+    fun getStateAfterDay(time: Int)
+    fun getInfoPump(p:JDialog, mark: MarkPetrol)
+    fun viewAllParams()
 }
 
-class Controller(_model:Model): ControllerInterface{
-    var model: Model = _model
-    var view: View
-
+class Controller(_model: Model): ControllerInterface{
+    private var model: Model = _model
+    private var view: View
 
     init{
-        view = View(this,model)
+        model = _model
+        view = View(this)
+//        view.regObsev()
         view.createView()
 //        view.createControls()
-//        model.initialize()
+        model.initialize()
     }
-    override fun setPrimarySetting(name: String, markUp: Int, maxLen : Int,countPumps :Int,
-                                   counts :Map<String,String>?, prices:Map<String,String>?){
+    override fun setPrimarySettings(name: String, markUp: Int, maxLen : Int, countPumps :Int,
+                                    counts :Map<String,String>?, prices:Map<String,String>?){
         model = createSt(name,markUp, maxLen,14, countPumps,counts!!,prices!!)
-        programRun1(model)
+        view.controller = this
+//        view.model = model
+        view.viewDay(model.getDay())
+        view.viewConvertGlobalTime(model.convertTime(model.getTime()))
+        view.viewConvertEventTime(model.convertTime(model.getTimeEvent()))
+        view.viewVolume("0")
+        view.viewAvgVolumeHour("0")
+        view.viewAvgVolumeDay("0")
+        view.viewCounts(0,0)
+        view.viewProfit(0.0)
+        model.registerObserver(view)
     }
-    override fun setSettingsPumps(counts :Map<String,String>?, prices:Map<String,String>?){
-//        if (counts != null && prices != null){
-//            model.createGasStation(counts,prices)
-//        }else{
-//            println("Неправильно заполнены поля")
-//        }
-
+    override fun setStep(step: Int) {
+        model.setStep(step)
     }
-    override fun start() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun stop() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun setStep() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
     override fun stepByStepDo() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
+        model.nextStepOfModeling()
+        view.viewDay(model.getDay())
+        view.viewConvertGlobalTime(model.convertTime(model.getTime()))
+        view.viewConvertEventTime(model.convertTime(model.getTimeEvent()))
+        view.viewVolume(model.getGasStation().getVolume().toString())
 
-    override fun continuoslyDo() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        view.viewCounts(model.getGasStation().getCountServed(), model.getGasStation().getNotServed())
+        view.viewProfit(model.getGasStation().getProfit())
     }
+    override fun continuouslyDo() {
+        model.continuously()
 
-    override fun setStartModeling() {
+        view.viewDay(model.getDay())
+        view.viewConvertGlobalTime(model.convertTime(model.getTime()))
+        view.viewConvertEventTime(model.convertTime(model.getTimeEvent()))
+        view.viewVolume(model.getGasStation().getVolume().toString())
+        view.viewAvgVolumeDay(model.getAvgVolumeDay().toString())
+        view.viewCounts(model.getGasStation().getCountServed(), model.getGasStation().getNotServed())
+        view.viewProfit(model.getGasStation().getProfit())
+    }
+    override fun getStateAfterDay(time:Int){
+        model.modelingStep(time)
+        view.viewDay(model.getDay())
+        view.viewConvertGlobalTime(model.convertTime(model.getTime()))
+        view.viewConvertEventTime(model.convertTime(model.getTimeEvent()))
+        view.viewVolume(model.getGasStation().getVolume().toString())
+        view.viewAvgVolumeHour(model.getAvgVolumeHour().toString())
+
+    }
+    override fun startModeling() {
         view.createModelViewFrame()
+//        view.viewTime(model.getTime(),model.getTimeEvent())
+        view.viewDay(model.getDay())
     }
-
-    override fun setStartSettings() {
+    override fun startSettingsPumps() {
         view.createControls()
     }
+    override fun getInfoPump(p: JDialog, mark: MarkPetrol){
+        view.viewInfoPump(p,model.getGasStation().getInfo(mark))
+    }
 
-    override fun errorOfInput() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun viewAllParams() {
+        view.viewDay(model.getDay())
+        view.viewConvertGlobalTime(model.convertTime(model.getTime()))
+        view.viewConvertEventTime(model.convertTime(model.getTimeEvent()))
+
+        view.viewVolume(model.getGasStation().getVolume().toString())
+        view.viewAvgVolumeDay(model.getAvgVolumeDay().toString())
+        view.viewAvgVolumeHour(model.getAvgVolumeHour().toString())
+        view.viewProfit(model.getGasStation().getProfit())
+        view.viewCounts(model.getGasStation().getCountServed(), model.getGasStation().getNotServed())
+
     }
 }
 fun main(){
-    val model: Model = Model()
-    val controller: ControllerInterface  = Controller(model)
-
+    Controller( Model())
 }

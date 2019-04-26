@@ -4,10 +4,10 @@ import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.util.HashMap;
 
-import static packageGui.TestGuiWithKotlinKt.printData;
-import static packageGui.TestGuiWithKotlinKt.saveData;
 
 public class DialogPanel2 extends JFrame {
     private HashMap<String, String> mapMarksCount;
@@ -170,7 +170,7 @@ public class DialogPanel2 extends JFrame {
         vBox.add(h6Box);
         vBox.add(Box.createVerticalStrut(10));
 
-        JDialogStation.TestKeyListener keyL = new JDialogStation.TestKeyListener();
+        TestKeyListener keyL = new TestKeyListener();
         stationField1.addKeyListener(keyL);
         stationField2.addKeyListener(keyL);
         stationField3.addKeyListener(keyL);
@@ -214,7 +214,7 @@ public class DialogPanel2 extends JFrame {
         mapMarksCount.put("A95",stationField4.getText());
         mapMarksCount.put("A98",stationField5.getText());
         mapMarksCount.put("A100",stationField6.getText());
-        saveData("counts",mapMarksCount);
+//        saveData("counts",mapMarksCount);
 //       System.out.println(mapMarksCount);
 
     }
@@ -226,7 +226,7 @@ public class DialogPanel2 extends JFrame {
         mapMarksPrices.put("A95",priceField4.getText());
         mapMarksPrices.put("A98",priceField5.getText());
         mapMarksPrices.put("A100",priceField6.getText());
-        saveData("price",mapMarksPrices);
+//        saveData("price",mapMarksPrices);
 //        System.out.println(mapMarksPrices);
     }
     private JDialog createDialog(String title, boolean modal) {
@@ -235,5 +235,18 @@ public class DialogPanel2 extends JFrame {
         dialog.setSize(400, 600);
 //        dialog.setSize(200, 130);
         return dialog;
+    }
+    public static class TestKeyListener implements KeyListener {
+        @Override
+        public void keyTyped(KeyEvent e) {
+        }
+        public void keyPressed(KeyEvent event){
+            if(event.getKeyCode() == KeyEvent.VK_ENTER){
+                event.getComponent().transferFocus();
+            }
+        }
+        @Override
+        public void keyReleased(KeyEvent e) {
+        }
     }
 }
